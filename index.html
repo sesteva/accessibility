@@ -118,6 +118,169 @@
         </section>
         <!-- Section: Ends
         ================================================== -->
+        
+         <!-- Section: Starts
+        ================================================== -->
+        <section id="title">
+          <div class="page-header">
+            <h1>Title</h1>
+          </div>
+
+          <h2>Collapsible Sections</h2>
+          <p>Can be used anywhere an <a> tag is used to "expand" and "collapse" a hidden section somewhere on the page (they don't necessarily have to be co-located)</p>
+
+          <style>
+          .scContainer { 
+            background-color: #CCC; 
+            width: 325px; 
+            padding-left: 5px;
+          }
+          .scCar { 
+            padding: 5px 0;  
+          }
+          .scCar .scProduct { 
+            background-color: #fff; 
+            padding:15px 5px; 
+            margin: 0 5px 0 0;
+            width:310px;
+          }
+          .accessible {   /* Actual styling for hidden text */
+            height: 1px;
+            left: -10000px;
+            overflow: hidden;
+            position: absolute;
+            top: auto;
+            width: 1px;
+            z-index: 10;
+          }
+          .accessible {   */  Overriding to make visible for understandability  */
+            color:#fff;                     /**/                          
+            background-color:#999;                  /**/
+            height: auto;                   /**/
+            left: auto;                     /**/
+            position:relative;                  /**/
+            width: auto;                    /**/
+            border: 2px dotted #333;                /**/
+          }                         /**/
+          span.accessible {                     /**/
+            color:#fff;                     /**/
+            font-style: italic;                 /**/
+            padding: 5px;                   /**/
+            margin: 1px;                    /**/
+          }                         /**/
+          .accessible_hilite {
+            color:#fff;                       
+            background-color:#999;
+            padding: 2px;
+            border: 2px dotted #333;
+          }
+          .linkIconOffsetLeft {
+            background-position: left center; 
+            padding-left: 17px;
+            background-repeat: no-repeat;
+          }
+          .expandIcon { 
+            background-image: url('./icon_show.gif'); 
+          }
+          .collapseIcon { 
+            background-image: url('./icon_hide.gif'); 
+          }
+          .explain {
+            padding: 20px 0;
+            line-height: 1.5em;
+          }
+          #hotel_policies {
+            border: 1px solid #333;
+            padding: 5px;
+            margin: 5px;
+            width: 50%;
+          }
+          
+        </style>
+
+          <div class="bs-docs-example">
+            <div class="explain"><span class="accessible">Hidden text highlighted like this for readability / understandability</span></div>
+<div class="scContainer">
+  <div class="scCar">
+    <div class="scProduct">
+      <a href="#carDet_new" class="linkIconOffsetLeft expandIcon toggleCollapsableSection">
+        Car <span class="accessible">Details</span>
+        <span class="accessible expand" style="display:inline">, Click to Expand Section</span>
+        <span class="accessible collapse" style="display:none">, Click to Collapse Section</span>
+      </a>
+    </div>
+    <div id="carDet_new" class="scDetails" style="display:none;">
+      <p>
+        <strong>Economy</strong><br/>
+        Hertz<br/>
+        Los Angeles International Airport (LAX)<br/>
+        <span>Pick up:</span> <strong>Monday, July 8, 2013</strong><br />
+        <span>Drop off:</span> <strong>Tuesday, July 9, 2013</strong><br/>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="explain">
+  But it doesn't have to be <span class="accessible_hilite">hidden text</span> that gets switched out.<br/>
+  You can alter the visible text like the example below:
+</div>
+
+<div id="hotel_policies">
+  All hotel reservations are prepaid. Your rewards account or credit card account will be charged when you complete your reservation.&nbsp;
+  <a href="#goodbuy_det1" class="toggleCollapsableSection">
+     <span class="expand">View further details.</span>
+     <span class="collapse" style="display:none;">Collapse details.</span>
+  </a>
+  <ul id='goodbuy_det1' style="display:none;">
+    <li>Hotel reservations are guaranteed for late arrival</li>
+    <li>Hotel reservations are generally ineligible for hotel award points or airline mileage</li>
+  </ul>
+</div>
+          </div>
+<pre class="prettyprint linenums">
+<div class="explain"><span class="accessible">Hidden text highlighted like this for readability / understandability</span></div>
+<div class="scContainer">
+  <div class="scCar">
+    <div class="scProduct">
+      <a href="#carDet_new" class="linkIconOffsetLeft expandIcon toggleCollapsableSection">
+        Car <span class="accessible">Details</span>
+        <span class="accessible expand" style="display:inline">, Click to Expand Section</span>
+        <span class="accessible collapse" style="display:none">, Click to Collapse Section</span>
+      </a>
+    </div>
+    <div id="carDet_new" class="scDetails" style="display:none;">
+      <p>
+        <strong>Economy</strong><br/>
+        Hertz<br/>
+        Los Angeles International Airport (LAX)<br/>
+        <span>Pick up:</span> <strong>Monday, July 8, 2013</strong><br />
+        <span>Drop off:</span> <strong>Tuesday, July 9, 2013</strong><br/>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="explain">
+  But it doesn't have to be <span class="accessible_hilite">hidden text</span> that gets switched out.<br/>
+  You can alter the visible text like the example below:
+</div>
+
+<div id="hotel_policies">
+  All hotel reservations are prepaid. Your rewards account or credit card account will be charged when you complete your reservation.&nbsp;
+  <a href="#goodbuy_det1" class="toggleCollapsableSection">
+     <span class="expand">View further details.</span>
+     <span class="collapse" style="display:none;">Collapse details.</span>
+  </a>
+  <ul id='goodbuy_det1' style="display:none;">
+    <li>Hotel reservations are guaranteed for late arrival</li>
+    <li>Hotel reservations are generally ineligible for hotel award points or airline mileage</li>
+  </ul>
+</div>
+</pre>
+        </section>
+        <!-- Section: Ends
+        ================================================== -->
 
 
       </div>
