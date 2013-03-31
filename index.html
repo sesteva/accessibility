@@ -129,7 +129,32 @@
 
           <h2>Collapsible Sections</h2>
           <p>Can be used anywhere an 'a' tag is used to "expand" and "collapse" a hidden section somewhere on the page (they don't necessarily have to be co-located)</p>
+          <script language="JavaScript">
 
+  function toggleCollapsableSection(sectionId, openWord, closeWord) {
+		// establish defaults
+		if (!openWord) openWord = 'expand';
+		if (!closeWord) closeWord = 'collapse';
+
+		// check if section is currently visible
+		var vis = jQuery('#'+sectionId).is(':visible');
+
+		//grab the controlling <a> tag
+		var aTagObj = jQuery('a[href="#'+sectionId+'"], a[id$="'+sectionId+'_link"]');
+
+		// toggle each according to visibility
+		jQuery('#'+sectionId+'_'+openWord+'_hidden').add( aTagObj.find('.'+openWord) ).toggle( vis );
+		jQuery('#'+sectionId+'_'+closeWord+'_hidden, #'+sectionId).add( aTagObj.find('.'+closeWord) ).toggle( !vis );
+
+		// replace the class on the aTagObj that controls which icon should display
+		aTagObj.filter('.'+openWord+'Icon, .'+closeWord+'Icon').removeClass(openWord+'Icon '+closeWord+'Icon').addClass( ( vis ? openWord : closeWord )+'Icon');	
+
+		// assign focus to section if newly revealed
+		if (!vis) jQuery('#'+sectionId).attr('tabindex', -1).focus();
+	}
+	
+</script>
+	
           <style>
           .scContainer { 
             background-color: #CCC; 
